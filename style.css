@@ -1,0 +1,229 @@
+/* selector + propiedad + valor */
+
+/* selector {
+propiedad: valor;
+
+} */
+
+
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #0d0d0d; /* negro */
+    color: white;
+}
+
+
+/* ENCABEZADO */
+
+
+header {
+    background-color: #006400; /* verde oscuro */
+    color: white;
+    text-align: center;
+    padding: 20px 10px;
+}
+
+header h1 {
+    font-size: 60px;
+    margin-bottom: 10px;
+}
+
+header img.escudo {
+    width: 200px;
+    margin-top: 10px;
+}
+
+
+/* MENÚ DE NAVEGACIÓN */
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 15px 0 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    background-color: #1a1a1a;
+    padding: 8px 16px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #fafbfa; /* verde más claro */
+}
+
+
+/* CONTENIDO PRINCIPAL */
+
+
+main {
+    padding: 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+h2 {
+    text-align: center;
+    text-decoration: overline;
+    color:#006400 ; /* verde chillon */
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+p,
+li {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+img {
+    width: 100px;
+}
+
+.equipo {
+    width: 300px;
+    display: block;
+    margin: 20px auto;
+}
+
+/* TABLAS */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th,
+table td {
+    padding: 10px;
+    border: 1px solid #00FF7F;
+    text-align: center;
+}
+
+table th {
+    background-color: #006400;
+    color: white;
+}
+
+
+/* VIDEOS */
+
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    margin-top: 20px;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* FORMULARIOS / INPUTS */
+
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f2f2f2;
+    font-size: 1rem;
+}
+
+/* PIE DE PÁGINA */
+
+
+footer {
+    background-color: #1a1a1a;
+    color: white;
+    text-align: center;
+    padding: 20px 10px;
+    margin-top: 40px;
+}
+
+footer img.escudo {
+    width: 90px;
+    margin-bottom: 10px;
+}
+
+footer a {
+    color: #006400;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+
+/* RESPONSIVE */
+
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 40px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .equipo {
+        width: 90%;
+    }
+}
+/* ----------- BOX MODEL explícito ----------- */
+section.card {
+    background-color: #1a1a1a;
+    border: 2px solid #006400;
+    padding: 15px; /* relleno interno */
+    margin: 10px;  /* separación externa */
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+/* ----------- GRID para organizar secciones ----------- */
+.contenedor-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas iguales */
+    gap: 20px;
+}
+
+/* ----------- Ajuste responsive con media queries ----------- */
+@media (max-width: 900px) {
+    .contenedor-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas en tablets */
+    }
+}
+
+@media (max-width: 600px) {
+    .contenedor-grid {
+        grid-template-columns: 1fr; /* 1 columna en móviles */
+    }
+}
