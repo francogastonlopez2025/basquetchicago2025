@@ -224,6 +224,23 @@ section.card {
 
 @media (max-width: 600px) {
     .contenedor-grid {
-        grid-template-columns: 1fr; /* 1 columna en móviles */
+        grid-template-columns: 1fr; /* 1 columna en mobiles */
+    }
+}
+/* RESPONSIVE */
+
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 40px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .equipo {
+        width: 90%;
     }
 }
